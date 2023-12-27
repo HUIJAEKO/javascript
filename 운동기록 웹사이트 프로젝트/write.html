@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--아이콘-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!--css연결-->
+    <link href="write.css" rel="stylesheet">
+    <!--구글폰트-->
+    <link href="https://fonts.googleapis.com/css2?family=Hi+Melody&family=Nanum+Brush+Script&family=Roboto+Mono:ital,wght@1,200&family=Sunflower:wght@300&display=swap" rel="stylesheet">
+    <title>스톱워치</title>
+</head>
+
+<body>
+    <!--헤더영역-->
+    <header>    
+        <div class="container">
+            <!--헤더아이콘-->
+            <h1>
+                <i class="fa-solid fa-person-walking"></i>
+                <i class="fa-solid fa-dumbbell"></i>
+            </h1>
+        </div>
+    </header>
+    <!--메인영역-->
+    <main>
+        <!--스톱워치-->
+        <div class="Stopwatch">
+            <!--스톱워치 시간-->
+            <div class ="time">
+                <h1 Id="stopwatch">
+                    00:00:00
+                </h1>
+            </div>
+            <div>
+            <!--스톱워치 버튼-->
+            <div class="option">
+                <button onclick="start()" titme="시작버튼" title="시작">start</button>
+                <button onclick="stop()" titme="종료버튼" title="종료">stop</button>
+                <button onclick="reset()" titme="리셋버튼" title="리셋">reset</button>
+            </div>
+        </div>
+        <!--운동기록하기-->
+        <div class="Write">
+                <div class="up">
+                    <fieldset>
+                        <legend></legend>
+                            <div class="mainwork">
+                                <lable>메인부위:</lable>
+                                <lable><input type="checkbox" name="where" value="가슴" title="가슴">가슴</lable>    
+                                <lable><input type="checkbox" name="where" value="등" title="등">등</lable>
+                                <lable><input type="checkbox" name="where" value="하체" title="하체">하체</lable>
+                                <lable><input type="checkbox" name="where" value="어깨" title="어깨">어깨</lable>
+                                <lable><input type="checkbox" name="where" value="팔" title="팔">팔</lable>
+                            </div>
+                            <div class="day">
+                                <lable>운동날짜:</lable>
+                                <select name="년도" title="년도">
+                                    <option value="년도"> 년도
+                                    <option value="2023년"> 2023년
+                                    <option value="2024년"> 2024년
+                                    <option value="2025년"> 2025년
+                                </select>
+                                <select name="월" title="월">
+                                    <option value="월"> 월
+                                    <option value="1월"> 1월
+                                    <option value="2월"> 2월
+                                    <option value="3월"> 3월
+                                    <option value="4월"> 4월
+                                    <option value="5월"> 5월
+                                    <option value="6월"> 6월
+                                    <option value="7월"> 7월
+                                    <option value="8월"> 8월
+                                    <option value="9월"> 9월
+                                    <option value="10월"> 10월
+                                    <option value="11월"> 11월
+                                    <option value="12월"> 12월
+                                </select>
+                                <select name="일" title="일">
+                                    <option value="일"> 일 <option value="1일"> 1일<option value="2일"> 2일
+                                    <option value="3일"> 3일<option value="4일"> 4일
+                                    <option value="5일"> 5일<option value="6일"> 6일
+                                    <option value="7일"> 7`일<option value="8일"> 8일
+                                    <option value="9일"> 9일<option value="10일"> 10일
+                                    <option value="11일"> 11일<option value="12일"> 12일
+                                    <option value="13일"> 13일<option value="14일"> 14일
+                                    <option value="15일"> 15일<option value="16일"> 16일
+                                    <option value="17일"> 17일<option value="18일"> 18일
+                                    <option value="19일"> 19일<option value="20일"> 20일
+                                    <option value="21일"> 21일<option value="22일"> 22일
+                                    <option value="23일"> 23일<option value="24일"> 24일
+                                    <option value="25일"> 25일<option value="26일"> 26일
+                                    <option value="27일"> 27일<option value="28일"> 28일
+                                    <option value="29일"> 29일<option value="30일"> 30일
+                                    <option value="31일"> 31일 
+                                </select>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                        <div class="howmany">
+                            <table id="doit">
+                                <thead id="doithead">
+                                    <tr id="doittr">
+                                        <th>운동종목</th>
+                                        <th id="blank">1SET</th>
+                                        <th id="blank">2SET</th>
+                                        <th id="blank">3SET</th>
+                                        <th id="blank">4SET</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="doitbody">
+                                    <tr id="doitbody1">
+                                        <td><input type="text"></td>
+                                        <td>무게<input type="text" id="blank"></br>횟수<input type="text" id="blank"></td>
+                                        <td>무게<input type="text" id="blank"></br>횟수<input type="text" id="blank"></td>
+                                        <td>무게<input type="text" id="blank"></br>횟수<input type="text" id="blank"></td>
+                                        <td>무게<input type="text" id="blank"></br>횟수<input type="text" id="blank"></td>
+                                    </tr>
+                                    <tr id="doitbody2">
+                                        <td><input type="text"></td>
+                                        <td>무게<input type="text" id="blank"></br>횟수<input type="text" id="blank"></td>
+                                        <td>무게<input type="text" id="blank"></br>횟수<input type="text" id="blank"></td>
+                                        <td>무게<input type="text" id="blank"></br>횟수<input type="text" id="blank"></td>
+                                        <td>무게<input type="text" id="blank"></br>횟수<input type="text" id="blank"></td>
+                                    </tr>
+                                    <tr id="doitbody3">
+                                        <td><input type="text"></td>
+                                        <td>무게<input type="text" id="blank"></br>횟수<input type="text" id="blank"></td>
+                                        <td>무게<input type="text" id="blank"></br>횟수<input type="text" id="blank"></td>
+                                        <td>무게<input type="text" id="blank"></br>횟수<input type="text" id="blank"></td>
+                                        <td>무게<input type="text" id="blank"></br>횟수<input type="text" id="blank"></td>
+                                    </tr>
+                                    <tr id="doitbody4">
+                                        <td><input type="text"></td>
+                                        <td>무게<input type="text" id="blank"></br>횟수<input type="text" id="blank"></td>
+                                        <td>무게<input type="text" id="blank"></br>횟수<input type="text" id="blank"></td>
+                                        <td>무게<input type="text" id="blank"></br>횟수<input type="text" id="blank"></td>
+                                        <td>무게<input type="text" id="blank"></br>횟수<input type="text" id="blank"></td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                            <div class="rowplus"><button onclick="colplus()" title="세트추가">세트추가</button></div>
+                        </div>
+                    <div class="colplus">
+                        <button onclick="rowplus()" id="add" title="종목추가">종목추가</button>
+                        <button onclick="save()" type="reset" title="저장하기">저장하기</button>
+                    </div>
+        </div>
+    </main>
+
+    <script src="write.js"></script>    
+</body>
+
+</html>

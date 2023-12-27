@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--아이콘-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!--css연동-->
+    <link rel="stylesheet" href="login.css">
+    <!--구글폰트-->
+    <link href="https://fonts.googleapis.com/css2?family=Hi+Melody&family=Nanum+Brush+Script&family=Sunflower:wght@300&display=swap" rel="stylesheet">    
+    <title>로그인완료</title>
+</head>
+<body>
+    <!--헤더영역-->
+    <header>    
+        <div class="container">
+            <!--헤더아이콘-->
+            <h1>
+                <i class="fa-solid fa-person-walking"></i>
+                <i class="fa-solid fa-dumbbell"></i>
+            </h1>
+            
+        </div>
+    </header>
+    <!--메인버튼-->
+    <main>
+        <!--버튼들-->
+        <div class="buttons">
+            <form action="write.html" method="get" title="운동기록하기">
+                <button>운동기록하기</button>
+            </form>
+            <form action="record.html" method="get" title="기록보기">
+                <button>운동기록보기</button>
+            </form>
+        </div>
+        <div class="destination">
+            <h1>HOW TO WORK?</h1>
+        </div>
+        </div>
+        <!--운동알려주기 배너-->
+        <div class="learn">
+            <div class="imges"><a href="https://www.youtube.com/watch?v=45y3CyIR7Xg"><img src="image/chest.png" title="가슴운동배우기"></a></div>
+            <div class="imges"><a href="https://www.youtube.com/watch?v=ZBKtRSQJT2w"><img src="image/back.png" title="등운동배우기"></a></div>
+            <div class="imges"><a href="https://www.youtube.com/watch?v=cBZnbTeld2w"><img src="image/shoulder.png" title="어꺠운동배우기"></a></div>
+            <div class="imges"><a href="https://www.youtube.com/watch?v=hrXfOwoEwSI"><img src="image/leg.png" title="하체운동배우기"></a></div>
+            <div class="imges"><a href="https://www.youtube.com/watch?v=XTdKLvc-wGU"><img src="image/double.png" title="이두운동배우기"></a></div>
+            <div class="imges"><a href="https://www.youtube.com/watch?v=KUx68MClxV0"><img src="image/tri.png" title="삼두운동배우기"></a></div>
+        </div>
+    </main>
+    
+    <!--제이쿼리연동-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!--스크립트-->
+    <script src="login.js"></script>
+    <script>
+        $('.learn').slick({
+            centerMode: true,
+            centerPadding: '0px',
+            autoplay: true,
+            autoplaySpeed:2000,
+            slidesToShow: 3,
+            responsive: [
+                {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '50px',
+                    slidesToShow: 3
+                }
+                },
+                {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '80px',
+                    slidesToShow: 1
+                }
+                }
+            ]
+        })
+    </script>
+</body>
+</html>
+
